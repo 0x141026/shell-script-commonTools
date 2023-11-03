@@ -2,7 +2,7 @@
 
 # 定义一个函数，将秒数转换为时分秒格式
 function format_time() {
-  local time=$1    
+  local time=$1      
   local hours=$((time / 3600))
   local minutes=$(( (time % 3600) / 60 | bc))
   local seconds=$((time % 60))
