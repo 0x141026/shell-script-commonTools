@@ -13,10 +13,12 @@ total_duration=0
 video_directory=$1
 # video_directory="/Users/jianzhounie/java架构师/java直通车/阶段三：分布式架构-逐个击破分布式核心问题（9-17周）/12/*.mp4"
 if [ -z "$video_directory" ]; then
-  echo "第一个参数，目录地址为空，请输入："
+  echo "第一个参数，目录地址为空，请输入：(路径两边不需要加双引号！)"
   read video_directory
+  echo "读取用户的输入为：$video_directory"
 else
   echo "要计算视频总时长的目录: $video_directory"
+  video_directory=$video_directory
 fi
 # 遍历目录下的所有mp4文件
 for file in $video_directory
